@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Todo.css";
 
-export default function Todo({ text, completed, index, updateTodo, addTodo, deleteTodo }) {
+export default function Todo({ text, completed, index, updateTodo, addTodo, deleteTodo}) {
     const [visible, setVisible] = useState(false);
 
     // Creates a new todo when user hits the enter key
@@ -18,7 +18,9 @@ export default function Todo({ text, completed, index, updateTodo, addTodo, dele
 
     // Sets visible to false when the component is unmounted
     const handleClick = () => {
-        setTimeout(() => deleteTodo(index), 300);
+        setTimeout(() => {
+            deleteTodo(index);
+        }, 300);
         setVisible(false);
     }
     return (

@@ -47,7 +47,7 @@ export default function App() {
             completed={todo.completed} 
             updateTodo={updateTodo} 
             addTodo={addTodo} 
-            deleteTodo={deleteTodo} 
+            deleteTodo={deleteTodo}
         />
     ));
 

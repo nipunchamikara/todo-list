@@ -7,7 +7,6 @@
     transform: scale(0.99);
     background-color: rgba(255, 255, 255, 0.2);
     transition: 0.3s ease-in;
-    
 }
 .Todo.active {
     opacity: 1.0;
@@ -23,9 +22,8 @@
     margin-top: 2px;
     border-bottom: 2px solid transparent;
     outline: none;
-    font-size: 30px;
-    width: calc(100% - 80px);
-    transition: 0.3s border-bottom;
+    width: calc(100% - 70px);
+    transition: 0.3s;
     background-color: transparent;
 }
 .Todo input:focus {
@@ -37,7 +35,7 @@
 }
 
 .Todo .exit {
-    font-size: 30px;
+    font-size: 25px;
     float: right;
     width: 30px;
     text-align: center;
@@ -51,7 +49,33 @@
 }
 
 .Todo .checkbox {
-    height: 30px;
-    width: 30px;
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .Todo input {
+        font-size: 15px;
+    }
+    .Todo .checkbox {
+        height: 15px;
+        width: 15px;
+    }
+    .Todo .exit {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .Todo input {
+        font-size: 20px;
+    }
+
+    .Todo .checkbox {
+        height: 20px;
+        width: 20px;
+    }
+
+    .Todo .exit {
+        font-size: 25px;
+    }
 }
